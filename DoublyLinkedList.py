@@ -8,19 +8,19 @@ class DoublyLinkedList:
 
   #Add to the end of the linked list
   def append(self, new_data):
-    if self.head is None:#empty linked list
-      new_node = Node(new_data)
-      self.head = new_node
-      self.tail = new_node
-    else:
-      #create a new node
-      new_node = Node(new_data)
-      #set new node previous to tail
-      new_node.previous = self.tail
-      #set tail.next to new node
-      self.tail.next = new_node
-      #move tail to new node
-      self.tail = new_node
+      if self.head is None:#empty linked list
+        new_node = Node(new_data)
+        self.head = new_node
+        self.tail = new_node
+      else:
+        #create a new node
+        new_node = Node(new_data)
+        #set new node previous to tail
+        new_node.previous = self.tail
+        #set tail.next to new node
+        self.tail.next = new_node
+        #move tail to new node
+        self.tail = new_node
 
   def insert(self, item, index):
       # Create the new node
