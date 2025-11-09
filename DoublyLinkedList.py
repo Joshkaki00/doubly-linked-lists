@@ -6,7 +6,6 @@ class DoublyLinkedList:
     self.head = None
     self.tail = None
 
-  # TODO: append()
   #Add to the end of the linked list
   def append(self, new_data):
     if self.head is None:#empty linked list
