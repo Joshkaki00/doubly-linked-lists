@@ -91,13 +91,20 @@ class DoublyLinkedList:
     
     # If we get here, value was not found
 
-  # TODO: update()
-  #Find and existing node with data == item and update with new value
-  #traverse to find node
-  #replace the data with value
-  #hint: look at find() for singly linked list
   def update(self, item, value):
-    pass
+      # Start at the head
+      current = self.head
+      
+      # Traverse the list to find the node with data == item
+      while current is not None:
+          if current.data == item:
+              # Update the data with the new value
+              current.data = value
+              return  # Node found and updated
+          
+          current = current.next
+      
+      # If we get here, item was not found
 
   # TODO: find()
   def find(self, item):
