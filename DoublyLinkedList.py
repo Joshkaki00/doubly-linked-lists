@@ -106,6 +106,16 @@ class DoublyLinkedList:
       
       # If we get here, item was not found
 
-  # TODO: find()
   def find(self, item):
-    pass
+      # Start at the head
+      current = self.head
+      
+      # Traverse the list to find the node with data == item
+      while current is not None:
+          if current.data == item:
+              return current  # Return the node if found
+          
+          current = current.next
+      
+      # Return None if not found
+      return None
